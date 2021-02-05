@@ -3,13 +3,17 @@
 #칭호는 전투력 상한값의 비내림차순으로 주어진다. 
 
 name_num,charac_num = map(int, input().split())
+name = []
+name_value = []
 for i in range(name_num):
-    name[i]= input()
-    #형이다른 두인자를 띄어쓰기로 받기 좀 애매쓰
+    name[i],name_value[i]= input().split()
+    name[i]=str(name[i])
+    name_value[i]=int(name_value[i])
+
 for i in range(charac_num):
     character[i]=int(input())
-    if(character[i]>):
+    if(character[i]<=name_value[0]):
+        print("%s".format(name[i]))
+    elif(name_value[1]>=character[i] >name_value[0]):
         print("")
-    elif( >character[i] >):
-        print("")
-        #name_num만큼 if문 생성
+        #name_num만큼 if문 생성<-이거 개수에따라 if문개수 출력 어떻게?!
